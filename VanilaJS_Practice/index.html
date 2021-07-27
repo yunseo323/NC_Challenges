@@ -10,6 +10,7 @@
     <script defer src="js/clock.js"></script>
     <script defer src="js/quote.js"></script>
     <script defer src="js/background.js"></script>
+    <script defer src="js/todo.js"></script>
 </head>
 <body>
     <form class="hidden" id="login-form">
@@ -21,6 +22,10 @@
         />
         <input type="submit" value="Log In" />
     </form>
+    <form id="todo-form">
+        <input type="text" placeholder="Write a TO DO and Press Enter" required/>
+    </form>
+    <ul id="todo-list"></ul>
     <h2 id="clock"></h2>
     <h1 class="hidden" id="greeting"></h1>
     <div id="quote">
