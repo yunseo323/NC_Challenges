@@ -1,10 +1,10 @@
-import logo from './logo.svg';
+
 import './App.css';
 
 function Food({ name, picture }) {
   return (
     <div>
-      <h2>I like {name}</h2>
+      <h3>I like {name}</h3>
       <img src={picture} />
     </div>
   );
@@ -37,12 +37,16 @@ const foodILike = [
   }
 ];
 
+function RenderFood(f){
+  return(
+    <Food name={f.name} picture={f.image}/>
+  )
+}
+
 function App() {
   return (
   <div>
-     {foodILike.map(dish => (
-        <Food name={dish.name} picture={dish.image} />
-      ))}
+     {foodILike.map(RenderFood)};
   </div>
   
   );
